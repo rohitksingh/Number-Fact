@@ -22,12 +22,17 @@
       .col-md-6{
         padding: 20px;
       }
+
+      .output{
+        visibility: hidden;
+      }
+
     </style>
   </head>
   <body>
     <div class="container">
            <div class="row">
-             <div class="col-md-6 offset-md-3 text-white bg-success">
+             <div class="card col-md-6 offset-md-3 text-white bg-success">
                <h1 class="display-4">Number facts</h1>
                <p class="lead">Enter a number, get a random fact</h1>
                 <form>
@@ -37,7 +42,7 @@
                 </form>
                 <div class="output" id="output">
                   <h1 class="lead">Number facts:</h1>
-                  <p class="lead" id="fact-text">owieowioewoieowoeiowieoiwoieowieowieoiwoie</h1>
+                  <p class="lead" id="fact-text"></h1>
                 </div>
              </div>
           </div>
@@ -47,6 +52,7 @@
 
       var num = document.querySelector('#input');
       var factText = document.querySelector('#fact-text');
+      var output = document.querySelector('#output');
 
       document.getElementById('input').addEventListener('input', fetchNumberFact);
 
@@ -54,8 +60,12 @@
         fetch('http://numbersapi.com/'+num.value)
               .then(response => response.text())
               .then(data => {
-                if(num.value !='' )
-                factText.innerHTML = data;
+                if(num.value !='' ){
+                  factText.innerHTML = data;
+                  output.style.visibility ='visible';
+                }else{
+                  output.style.visibility ='hidden';
+                }
               })
               .catch(err => console.log(err) );
       }
