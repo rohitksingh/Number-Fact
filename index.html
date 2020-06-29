@@ -37,17 +37,29 @@
                 </form>
                 <div class="output" id="output">
                   <h1 class="lead">Number facts:</h1>
-                  <p class="lead">owieowioewoieowoeiowieoiwoieowieowieoiwoie</h1>
+                  <p class="lead" id="fact-text">owieowioewoieowoeiowieoiwoieowieowieoiwoie</h1>
                 </div>
              </div>
           </div>
     </div>
 
     <script>
-      document.getElementById('input').addEventListener('input', function(e){
-           var inoutValue = e.target.value;
-           console.log(inoutValue);
-        });
+
+      var num = document.querySelector('#input');
+      var factText = document.querySelector('#fact-text');
+
+      document.getElementById('input').addEventListener('input', fetchNumberFact);
+
+      function fetchNumberFact(){
+        fetch('http://numbersapi.com/'+num.value)
+              .then(response => response.text())
+              .then(data => {
+                if(num.value !='' )
+                factText.innerHTML = data;
+              })
+              .catch(err => console.log(err) );
+      }
+
     </script>
     
     <!-- Optional JavaScript -->
