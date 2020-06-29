@@ -8,6 +8,11 @@ Implementation
 - Javascript function call
 
  </br></br>
+ <img width="851" alt="Screenshot 2020-06-29 at 12 14 20 AM" src="https://user-images.githubusercontent.com/11274840/85984103-86c0ae80-b99d-11ea-896a-a87578d2f314.png">
+<img width="601" alt="Screenshot 2020-06-29 at 12 14 01 AM" src="https://user-images.githubusercontent.com/11274840/85984118-8c1df900-b99d-11ea-8654-36c8d44f614e.png">
+
+ 
+<br><br> 
 ## About author
 <p align="center">This Repository is developed and maintained by </p>
 <p align="center">
