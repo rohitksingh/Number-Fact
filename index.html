@@ -9,11 +9,38 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Number Fact</title>
-    
+    <style>
+      body{
+        background-color: #333;
+        margin-top: 70px;
+      }
+      .output{
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .col-md-6{
+        padding: 20px;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-             
+           <div class="row">
+             <div class="col-md-6 offset-md-3 text-white bg-success">
+               <h1 class="display-4">Number facts</h1>
+               <p class="lead">Enter a number, get a random fact</h1>
+                <form>
+                  <div class="form-group">
+                    <input class="form-control" id="input" type="number">
+                  </div>
+                </form>
+                <div class="output" id="output">
+                  <h1 class="lead">Number facts:</h1>
+                  <p class="lead">owieowioewoieowoeiowieoiwoieowieowieoiwoie</h1>
+                </div>
+             </div>
+          </div>
     </div>
     
     <!-- Optional JavaScript -->
